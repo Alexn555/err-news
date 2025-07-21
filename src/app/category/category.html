@@ -1,0 +1,12 @@
+<section class="category">
+    <h3>{{ category?.header }}</h3>
+    <div #showboard class="shows">
+        <div #arrLeft class="arrow-left" (click)="prev()"> </div>
+        @for (show of category?.data; track trackCategoryShows($index, category)) {
+            <div class="show">
+                <img src="{{show?.verticalPhotos[0].photoTypes['60'].url}}" alt="{{category?.header}}" />
+            </div>
+        }
+        <div #arrRight class="arrow-right" (click)="next()"> </div>
+    </div>
+</section>

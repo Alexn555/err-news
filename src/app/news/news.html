@@ -1,0 +1,8 @@
+<section class="news">
+    @for (category of news; track trackCategory($index, category)) {
+        <news-category [category]="category"></news-category>
+    }
+    @empty {
+        <section>There are no News</section>
+    }
+</section>

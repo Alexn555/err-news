@@ -1,0 +1,44 @@
+.category {
+    position: relative;
+}
+
+.shows {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.show {
+    margin: 0 10px;
+    background-color: yellow;
+}
+
+%arrow-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.5);
+    zoom: 1.2;
+  }
+}
+
+.arrow-left {
+    @extend %arrow-btn;
+    left: 10px;
+    background-image: url('../../assets/audio_arrow_left.svg');
+}
+
+.arrow-right {
+    @extend %arrow-btn;
+    right: 0;
+    background-image: url('../../assets/audio_arrow_right.svg');
+}
